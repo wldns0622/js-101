@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #screen {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: tomato;
+      padding: 16px;
+    }
+  </style>
+  <title>Window Size</title>
+</head>
+
+<body>
+  <section id="screen">
+    <h1>Windows Size</h1>
+    <sapn class="screen"></sapn>
+    <sapn class="outer"></sapn>
+    <sapn class="inner"></sapn>
+    <sapn class="client"></sapn>
+  </section>
+
+
+  <script>
+    const screen = document.querySelector('.screen');
+    const outer = document.querySelector('.outer');
+    const inner = document.querySelector('.inner');
+    const client = document.querySelector('.client');
+
+    let handleWindowSize = function () {
+      screen.textContent = `window.screen: ${window.screen.width}, ${window.screen.height}`;
+      outer.textContent = `window.outer: ${window.outerWidth}, ${window.outerHeight}`;
+      inner.textContent = `window.inner: ${window.innerWidth}, ${window.innerHeight}`;
+      client.textContent = `window.client: ${window.document.documentElement.clientWidth}, ${window.document.documentElement.clientHeight}`;
+    }
+
+    window.addEventListener('load', handleWindowSize);
+    window.addEventListener('resize', handleWindowSize);
+
+  </script>
+</body>
+
+</html>
