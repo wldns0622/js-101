@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+button {
+  outline: none;
+  font-size: 1.5em;
+  color: chocolate;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
