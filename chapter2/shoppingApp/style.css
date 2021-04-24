@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  color: tomato;
+}
+
+body {
+  background-color: bisque;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+h1 {
+  margin: 50px;
+}
+
+#shopping {
+  background-color: floralwhite;
+  width: 350px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.shopping__list {
+  background-color: cornsilk;
+  height: 400px;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.item {
+  font-size: 1.5em;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item>span {
+  cursor: pointer;
+}
+
+.shopping__input {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopping__input input {
+  font-size: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.shopping__input button {
+  width: 5em;
+  height: 2em;
+  margin-left: 5px;
+  transition: background-color 100ms, color 100ms;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shopping__input button:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.clear {
+  background-color: floralwhite;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 100ms, color 100ms;
+}
+
+.clear:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.done {
+  color: darkgray;
+  text-decoration: line-through;
+}
