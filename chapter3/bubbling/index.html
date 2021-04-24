@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: brown;
+      width: 500px;
+      height: 500px;
+    }
+
+    .inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: burlywood;
+      width: 250px;
+      height: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inner">
+      <button>click me</button>
+    </div>
+  </div>
+
+
+  <script>
+    const outer = document.querySelector('.outer');
+    const inner = document.querySelector('.inner');
+    const button = document.querySelector('button');
+
+    outer.addEventListener('click', (event) => {
+      if (event.target !== event.currentTarget) {
+        return;
+      }
+      console.log(`outer: ${event.currentTarget} ${event.target}`);
+    })
+    inner.addEventListener('click', (event) => {
+      if (event.target !== event.currentTarget) {
+        return;
+      }
+      console.log(`inner: ${event.currentTarget} ${event.target}`);
+    })
+    button.addEventListener('click', (event) => {
+      console.log(`button1: ${event.currentTarget} ${event.target}`);
+    })
+    button.addEventListener('click', (event) => {
+      console.log(`button2: ${event.currentTarget} ${event.target}`);
+    })
+  </script>
+</body>
+
+</html>
