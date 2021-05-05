@@ -46,6 +46,7 @@ body {
   font-size: 32px;
   margin-top: 8px;
   border-radius: 20px;
+  visibility: hidden;
 }
 
 .game__score {
@@ -59,6 +60,7 @@ body {
   background-color: darksalmon;
   color: white;
   line-height: 50px;
+  visibility: hidden;
 }
 
 .game__field {
@@ -71,7 +73,6 @@ body {
 
 .pop-up {
   width: 400px;
-  height: 140px;
   padding: 20px;
   background-color:rgba(0, 0 , 0, 0.8);
   border-radius: 20px;
@@ -81,7 +82,7 @@ body {
   transform: translateY(-150%);
 }
 
-.pop-up--hide {
+.hide {
   display: none;
 }
 
